@@ -11,6 +11,11 @@ import { SwapiService } from './swapi.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DisplayComponent } from './display/display.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+// import { HttpClient } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
