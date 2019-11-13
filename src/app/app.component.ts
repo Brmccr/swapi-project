@@ -21,6 +21,7 @@ export class AppComponent {
   title = 'swapi-project';
   people: string = "";
   responsetwo: any;
+  selectedValue: any;
   // posts : any;
 
   // readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/'
@@ -38,5 +39,21 @@ export class AppComponent {
       console.log(this.responsetwo)
     })
   }
+
+  // search() {
+  //   this.http.get('https://swapi.co/api/?search=${inputInfo}')
+  //   .subscribe((responsetwo) => {
+  //     this.responsetwo = responsetwo;
+  //     console.log(this.responsetwo)
+  //   })
+  // }
+
+  // search() {
+  //   this.http.get('https://swapi.co/api/people/')
+  //   .subscribe((responsetwo) => {
+  //     this.responsetwo = responsetwo;
+  //     console.log(this.responsetwo)
+  //   })
+  // }
   
 }
