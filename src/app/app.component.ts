@@ -60,6 +60,13 @@ export class AppComponent {
     })
   }
 
+  // playAudio(){
+  //   let audio = new Audio();
+  //   audio.src = "../../../assets/audio/alarm.wav";
+  //   audio.load();
+  //   audio.play();
+  // }
+  
   // search() {
   //   this.http.get('https://swapi.co/api/?search=${inputInfo}')
   //   .subscribe((responsetwo) => {
