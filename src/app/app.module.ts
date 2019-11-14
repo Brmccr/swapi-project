@@ -8,26 +8,32 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule } from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
-// import { HttpClient } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchPeopleComponent } from './search-people/search-people.component';
+import { PeopleService } from "./people.service";
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PeopleDisplayComponent } from './people-display/people-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SearchPeopleComponent,
+    PeopleDisplayComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatSelectModule,
+    MatSelectModule, 
     MatInputModule,
     HttpClientModule,
-    FormsModule
-    // HttpClient
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
+   
   ],
-  providers: [],
+  providers: [PeopleService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

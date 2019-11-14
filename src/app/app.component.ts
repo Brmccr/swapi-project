@@ -25,18 +25,21 @@ export class AppComponent {
 
   // readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/'
   constructor(private http: HttpClient ) {}
-
-  ngOnInit() {
-    let obs = this.http.get('https://swapi.co/api/people/1')
-    obs.subscribe((response) => console.log(response));
-  }
   
-  search() {
-    this.http.get('https://swapi.co/api/' + this.people)
-    .subscribe((responsetwo) => {
-      this.responsetwo = responsetwo;
-      console.log(this.responsetwo)
-    })
-  }
+  //ngOnInit() {
+   // let obs = this.http.get('https://swapi.co/api/people/1')
+   // obs.subscribe((response) => console.log(response));
+  //}
+  
+  //search() {
+  //  this.http.get('https://swapi.co/api/' + this.people)
+   // .subscribe((responsetwo) => {
+   //   this.responsetwo = responsetwo;
+    //  console.log(this.responsetwo)
+   // })
+ // }
   
 }
+
+ 
+

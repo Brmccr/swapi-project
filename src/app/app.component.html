@@ -1,3 +1,5 @@
+
+
 <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png">
 <h1>Search for People, Ships, Or Films through the SWAPI API</h1>
 <!-- <h4>Basic mat-select</h4>
@@ -9,8 +11,8 @@
     </mat-option>
   </mat-select>
 </mat-form-field> -->
-
-<h4>Select What You Want To Search</h4>
+<app-search-people></app-search-people>
+<!--<h4>Select What You Want To Search</h4>
 <mat-form-field>
   <mat-label>Swapi</mat-label>
   <select matNativeControl required>
@@ -21,9 +23,17 @@
 </mat-form-field>
 
 
-<form class="example-form">
+<form class="example-form"
+class="example-form"
+      [formGroup]="searchPeople"
+      >
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Search People" value="">
+    <input matInput placeholder="Search People" value=""
+          formControlName = "personName"
+          type="text"
+          name="person"
+        required
+        >
   </mat-form-field>
 
   <form class="example-form">
@@ -40,4 +50,4 @@
       <button (click)="search()">Search</button>
 
       {{responsetwo.name}}
-<!-- <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->
+ <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->

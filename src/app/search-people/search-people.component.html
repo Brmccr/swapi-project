@@ -1,0 +1,48 @@
+<h4>Select What You Want To Search</h4>
+<mat-form-field>
+  <mat-label>Swapi</mat-label>
+  <select matNativeControl required>
+    <option value="people">People</option>
+    <option value="ships">Ships</option>
+    <option value="films">Films</option>
+  </select>
+</mat-form-field>
+
+
+<form class="example-form"
+      [formGroup]="searchPeople"
+      (ngSubmit)="onSearchPeople()">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Search People" ng-model="searchText" />
+  </mat-form-field>
+<button type="submit">Submit</button>
+  
+<form class="example-form"
+      [formGroup]="searchShips"
+      (ngSubmit)="onSearchShips()">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Search Ships" 
+             value=""
+             formControlName = "shipName"
+            type="text"
+            name="ship"
+            required
+            >
+    </mat-form-field>
+    <button type="submit">Submit</button>
+
+    <form class="example-form"
+          [formGroup]="searchFilms"
+         (ngSubmit)="onSearchFilms()">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Search Films" value=""
+        formControlName = "filmName"
+        type="text"
+        name="film"
+        required
+        >
+      </mat-form-field>
+      <button (click)="searchPeople()">Submit</button>*/
+ <mat-slider min="1" max="100" step="1" value="1"></mat-slider> 
+
+
