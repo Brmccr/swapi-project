@@ -24,8 +24,11 @@
       <div *ngIf="responsetwo">
         
           <ul>
-            <li><span>Character Name : {{responsetwo?.name}}</span></li>
-        <li><span>Birth Year : {{responsetwo?.birth_year}}</span></li>
+            <li><span>Character Name : {{responsetwo?.results[0].name}}</span></li>
+            <br>
+        <li><span>Birth Year : {{responsetwo?.results[0].birth_year}}</span></li>
+            <br>
+            <li><span>Height : {{responsetwo?.height}}</span></li>
       </ul>
       </div>
   <!-- <input type="text" class="form-control" id="name" ngModel name="other_college_name" required> -->
@@ -49,6 +52,7 @@
             <div *ngIf="responsefour">
               <ul>
               <li><span>Film Title : {{responsefour?.title}}</span></li>
+              <br>
               <li><span>Director : {{responsefour?.director}}</span></li>
             </ul>
             </div>

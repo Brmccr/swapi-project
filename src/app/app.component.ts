@@ -35,9 +35,9 @@ export class AppComponent {
     let obs = this.http.get('https://swapi.co/api/people/1')
     obs.subscribe((response) => console.log(response));
   }
-  
+  // https://swapi.co/api/people/?search=${inputInfo}
   search() {
-    this.http.get('https://swapi.co/api/people/' + this.people)
+    this.http.get('https://swapi.co/api/people/?search=' + this.people)
     .subscribe((responsetwo) => {
       this.responsetwo = responsetwo;
       console.log(this.responsetwo)
