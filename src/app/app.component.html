@@ -28,7 +28,7 @@
             <br>
         <li><span>Birth Year : {{responsetwo?.results[0].birth_year}}</span></li>
             <br>
-            <li><span>Height : {{responsetwo?.height}}</span></li>
+            <li><span>Height : {{responsetwo?.results[0].height}}</span></li>
       </ul>
       </div>
   <!-- <input type="text" class="form-control" id="name" ngModel name="other_college_name" required> -->
@@ -39,9 +39,14 @@
       <!-- <button (click)="searchShips()">Search Ships</button> -->
       <button class= "selectbutton" mat-raised-button (click)="searchShips()">Search Ships</button> 
       <div *ngIf="responsethree">
-        Starship Name : {{responsethree?.name}}
-        Starship Class : {{responsethree?.starship_class}}
-        <!-- Birth Year : {{responsethree?.birth_year}} -->
+        <ul>
+          <li><span>Starship Name : {{responsethree?.results[0].name}}</span></li>
+          <br>
+        <li><span>Starship Class : {{responsethree?.results[0].starship_class}}</span></li>
+        <br>
+        <li><span>Starship Passengers : {{responsethree?.results[0].passengers}}</span></li>
+
+        </ul>
       </div>
       </div>
 
@@ -51,9 +56,11 @@
         <!-- <button (click)="searchFilms()">Search Films</button> -->
             <div *ngIf="responsefour">
               <ul>
-              <li><span>Film Title : {{responsefour?.title}}</span></li>
+              <li><span>Film Title : {{responsefour?.results[0].title}}</span></li>
               <br>
-              <li><span>Director : {{responsefour?.director}}</span></li>
+              <li><span>Director : {{responsefour?.results[0].director}}</span></li>
+              <br>
+              <li><span>Release Date : {{responsefour?.results[0].release_date}}</span></li>
             </ul>
             </div>
             </div>
