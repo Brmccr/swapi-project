@@ -20,13 +20,18 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   title = 'swapi-project';
   people: string = "";
+  starships: string = "";
+  films: string = "";
   responsetwo: any;
+  responsethree: any;
+  responsefour: any;
+  selectedValue: any;
   // posts : any;
 
   // readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/'
   constructor(private http: HttpClient ) {}
   
-  //ngOnInit() {
+  //ngOnIsnit() {
    // let obs = this.http.get('https://swapi.co/api/people/1')
    // obs.subscribe((response) => console.log(response));
   //}

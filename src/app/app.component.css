@@ -1,0 +1,60 @@
+.mainimg {
+    width: 100%;
+    height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainlab{
+    color: #ffd700;
+}
+
+.inputselect{
+    background-color: black;
+    font-size: 20px;
+}
+
+.form-group{
+    font-size:20px;
+}
+
+li {
+    list-style-type: none;
+    /* display: inline;  */
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright{
+    float: right;
+}
+
+.selectbutton{
+    height: 2em;
+    background-color: slategrey;
+    color: #ffd700;
+    font-size:18px;
+    /* color: black; */
+}
+
+.form-control{
+    font-size:20px;
+}
+.materialinput{
+    background-color: black;
+}
+
+span{
+    background-color: black;
+    border-style: solid;
+}
+
+option{
+    font-size: 20px;
+}
+h4{
+    font-size: 25px;
+}

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule } from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -27,6 +28,7 @@ import { PeopleDisplayComponent } from './people-display/people-display.componen
     MatSliderModule,
     MatSelectModule, 
     MatInputModule,
+    MatButtonModule,
     HttpClientModule,
     FormsModule,
     HttpClientModule,
