@@ -28,9 +28,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     HttpClientModule,
     FormsModule,
-   
-   
-   
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
