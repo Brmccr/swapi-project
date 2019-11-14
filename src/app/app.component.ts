@@ -20,7 +20,12 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   title = 'swapi-project';
   people: string = "";
+  starships: string = "";
+  films: string = "";
   responsetwo: any;
+  responsethree: any;
+  responsefour: any;
+  selectedValue: any;
   // posts : any;
 
   // readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/'
@@ -30,13 +35,45 @@ export class AppComponent {
     let obs = this.http.get('https://swapi.co/api/people/1')
     obs.subscribe((response) => console.log(response));
   }
-  
+  // https://swapi.co/api/people/?search=${inputInfo}
   search() {
-    this.http.get('https://swapi.co/api/' + this.people)
+    this.http.get('https://swapi.co/api/people/?search=' + this.people)
     .subscribe((responsetwo) => {
       this.responsetwo = responsetwo;
       console.log(this.responsetwo)
     })
   }
+
+  searchShips() {
+    this.http.get('https://swapi.co/api/starships/' + this.starships)
+    .subscribe((responsethree) => {
+      this.responsethree = responsethree;
+      console.log(this.responsethree)
+    })
+  }
+
+  searchFilms() {
+    this.http.get('https://swapi.co/api/films/' + this.films)
+    .subscribe((responsefour) => {
+      this.responsefour = responsefour;
+      console.log(this.responsefour)
+    })
+  }
+
+  // search() {
+  //   this.http.get('https://swapi.co/api/?search=${inputInfo}')
+  //   .subscribe((responsetwo) => {
+  //     this.responsetwo = responsetwo;
+  //     console.log(this.responsetwo)
+  //   })
+  // }
+
+  // search() {
+  //   this.http.get('https://swapi.co/api/people/')
+  //   .subscribe((responsetwo) => {
+  //     this.responsetwo = responsetwo;
+  //     console.log(this.responsetwo)
+  //   })
+  // }
   
 }
