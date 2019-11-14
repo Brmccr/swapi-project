@@ -20,7 +20,11 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   title = 'swapi-project';
   people: string = "";
+  starships: string = "";
+  films: string = "";
   responsetwo: any;
+  responsethree: any;
+  responsefour: any;
   selectedValue: any;
   // posts : any;
 
@@ -33,10 +37,26 @@ export class AppComponent {
   }
   
   search() {
-    this.http.get('https://swapi.co/api/' + this.people)
+    this.http.get('https://swapi.co/api/people/' + this.people)
     .subscribe((responsetwo) => {
       this.responsetwo = responsetwo;
       console.log(this.responsetwo)
+    })
+  }
+
+  searchShips() {
+    this.http.get('https://swapi.co/api/starships/' + this.starships)
+    .subscribe((responsethree) => {
+      this.responsethree = responsethree;
+      console.log(this.responsethree)
+    })
+  }
+
+  searchFilms() {
+    this.http.get('https://swapi.co/api/films/' + this.films)
+    .subscribe((responsefour) => {
+      this.responsefour = responsefour;
+      console.log(this.responsefour)
     })
   }
 

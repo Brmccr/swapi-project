@@ -1,5 +1,5 @@
-<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png">
-<h1>Search for People, Ships, Or Films through the SWAPI API</h1>
+<img class="mainimg" src = "https://logos-download.com/wp-content/uploads/2016/09/Star_Wars_logo-1.png">
+<h1>Search for People, Ships, Or Films through SWAPI</h1>
 <!-- <h4>Basic mat-select</h4>
 <mat-form-field>
   <mat-label>Favorite food</mat-label>
@@ -9,10 +9,9 @@
     </mat-option>
   </mat-select>
 </mat-form-field> -->
-
 <h4>Select What You Want To Search</h4>
 <mat-form-field>
-  <mat-label>Swapi</mat-label>
+  <mat-label class="mainlab">Search Options</mat-label>
   <select class="form-control" [(ngModel)]="selectedValue" name="search" matNativeControl required>
     <option value="people">People</option>
     <option value="ships">Ships</option>
@@ -20,38 +19,46 @@
   </select>
 </mat-form-field>
 <div class="form-group" *ngIf="selectedValue == 'people'">
-  Search For Star Wars Characters: <input type="text" [(ngModel)]="people" name="something">
-      <button (click)="search()">Search People</button>
+  <span>Search For Star Wars Characters:</span> <input class="inputselect" type="text" [(ngModel)]="people" name="something">
+      <button class= "selectbutton" mat-raised-button (click)="search()">Search People</button>
       <div *ngIf="responsetwo">
-        Character Name : {{responsetwo?.name}}
-        Birth Year : {{responsetwo?.birth_year}}
+        
+          <ul>
+            <li><span>Character Name : {{responsetwo?.name}}</span></li>
+        <li><span>Birth Year : {{responsetwo?.birth_year}}</span></li>
+      </ul>
       </div>
   <!-- <input type="text" class="form-control" id="name" ngModel name="other_college_name" required> -->
 </div>
 
 <div class="form-group" *ngIf="selectedValue == 'ships'">
-  Search For Star Wars Ships: <input type="text" [(ngModel)]="ships" name="ships">
-      <button (click)="search()">Search Ships</button>
-      <div *ngIf="responsetwo">
-        Character Name : {{responsetwo?.name}}
-        Birth Year : {{responsetwo?.birth_year}}
+  <span>Search For Star Wars Ships:</span> <input class="inputselect" type="text" [(ngModel)]="ships" name="ships">
+      <!-- <button (click)="searchShips()">Search Ships</button> -->
+      <button class= "selectbutton" mat-raised-button (click)="searchShips()">Search Ships</button> 
+      <div *ngIf="responsethree">
+        Starship Name : {{responsethree?.name}}
+        Starship Class : {{responsethree?.starship_class}}
+        <!-- Birth Year : {{responsethree?.birth_year}} -->
       </div>
       </div>
 
     <div class="form-group" *ngIf="selectedValue == 'films'">
-        Search For Star Wars Films: <input type="text" [(ngModel)]="films" name="films">
-            <button (click)="search()">Search Films</button>
-            <div *ngIf="responsetwo">
-              Character Name : {{responsetwo?.name}}
-              Birth Year : {{responsetwo?.birth_year}}
+        <span>Search For Star Wars Films:</span> <input class="inputselect" type="text" [(ngModel)]="films" name="films">
+        <button class= "selectbutton" mat-raised-button (click)="searchFilms()">Search Films</button>    
+        <!-- <button (click)="searchFilms()">Search Films</button> -->
+            <div *ngIf="responsefour">
+              <ul>
+              <li><span>Film Title : {{responsefour?.title}}</span></li>
+              <li><span>Director : {{responsefour?.director}}</span></li>
+            </ul>
             </div>
             </div>
 
-
-<form class="example-form">
+<!-- <form class="example-form">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Search People" value="">
   </mat-form-field>
+  <button (click)="search()">Search People</button>
 
   <form class="example-form">
     <mat-form-field class="example-full-width">
@@ -61,20 +68,19 @@
     <form class="example-form">
       <mat-form-field class="example-full-width">
         <input matInput placeholder="Search Films" value="">
-      </mat-form-field>
+      </mat-form-field> -->
 
-      Search: <input type="text" [(ngModel)]="people" name="something">
-      <button (click)="search()">Search</button>
+      <!-- Search: <input type="text" [(ngModel)]="people" name="something">
+      <button (click)="search()">Search</button> -->
       
-      <div *ngIf="responsetwo">
+      <!-- <div *ngIf="responsetwo">
       Character Name : {{responsetwo?.name}}
       Birth Year : {{responsetwo?.birth_year}}
-    </div>
+    </div> -->
 
     <!-- <div angular.ForEach="responsetwo">
       Character Name : {{responsetwo?.name}}
       Birth Year : {{responsetwo?.birth_year}}
     </div> -->
-
     
 <!-- <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->
