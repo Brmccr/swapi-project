@@ -45,7 +45,7 @@ export class AppComponent {
   }
 
   searchShips() {
-    this.http.get('https://swapi.co/api/starships/' + this.starships)
+    this.http.get('https://swapi.co/api/starships/?search=' + this.starships)
     .subscribe((responsethree) => {
       this.responsethree = responsethree;
       console.log(this.responsethree)
@@ -53,7 +53,7 @@ export class AppComponent {
   }
 
   searchFilms() {
-    this.http.get('https://swapi.co/api/films/' + this.films)
+    this.http.get('https://swapi.co/api/films/?search=' + this.films)
     .subscribe((responsefour) => {
       this.responsefour = responsefour;
       console.log(this.responsefour)
