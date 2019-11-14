@@ -10,17 +10,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SearchPeopleComponent } from './search-people/search-people.component';
-import { PeopleService } from "./people.service";
+import { FormsModule } from '@angular/forms';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { PeopleDisplayComponent } from './people-display/people-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchPeopleComponent,
-    PeopleDisplayComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -31,11 +28,11 @@ import { PeopleDisplayComponent } from './people-display/people-display.componen
     MatButtonModule,
     HttpClientModule,
     FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule
+   
+   
    
   ],
-  providers: [PeopleService, HttpClient],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

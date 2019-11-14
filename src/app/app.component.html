@@ -1,7 +1,5 @@
-
-
-<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png">
-<h1>Search for People, Ships, Or Films through the SWAPI API</h1>
+<img class="mainimg" src = "https://logos-download.com/wp-content/uploads/2016/09/Star_Wars_logo-1.png">
+<h1>Search for People, Ships, Or Films through SWAPI</h1>
 <!-- <h4>Basic mat-select</h4>
 <mat-form-field>
   <mat-label>Favorite food</mat-label>
@@ -11,8 +9,7 @@
     </mat-option>
   </mat-select>
 </mat-form-field> -->
-<app-search-people></app-search-people>
-<!--<h4>Select What You Want To Search</h4>
+<h4>Select What You Want To Search</h4>
 <mat-form-field>
   <mat-label class="mainlab">Search Options</mat-label>
   <select class="form-control" [(ngModel)]="selectedValue" name="search" matNativeControl required>
@@ -61,25 +58,15 @@
             </div>
             </div>
 
-<form class="example-form"
-class="example-form"
-      [formGroup]="searchPeople"
-      >
+<!-- <form class="example-form">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Search People" value=""
-          formControlName = "personName"
-          type="text"
-          name="person"
-        required
-        >
+    <input matInput placeholder="Search People" value="">
   </mat-form-field>
   <button (click)="search()">Search People</button>
-
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <input matInput placeholder="Search Ships" value="">
     </mat-form-field>
-
     <form class="example-form">
       <mat-form-field class="example-full-width">
         <input matInput placeholder="Search Films" value="">
@@ -93,5 +80,9 @@ class="example-form"
       Birth Year : {{responsetwo?.birth_year}}
     </div> -->
 
-      {{responsetwo.name}}
- <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->
+    <!-- <div angular.ForEach="responsetwo">
+      Character Name : {{responsetwo?.name}}
+      Birth Year : {{responsetwo?.birth_year}}
+    </div> -->
+    
+<!-- <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->

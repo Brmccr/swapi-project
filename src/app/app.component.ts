@@ -31,19 +31,35 @@ export class AppComponent {
   // readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/'
   constructor(private http: HttpClient ) {}
   
-  //ngOnIsnit() {
-   // let obs = this.http.get('https://swapi.co/api/people/1')
-   // obs.subscribe((response) => console.log(response));
-  //}
+  ngOnIsnit() {
+   let obs = this.http.get('https://swapi.co/api/people/1')
+   obs.subscribe((response) => console.log(response));
+  }
   
-  //search() {
-  //  this.http.get('https://swapi.co/api/' + this.people)
-   // .subscribe((responsetwo) => {
-   //   this.responsetwo = responsetwo;
-    //  console.log(this.responsetwo)
-   // })
- // }
-  
+  search() {
+   this.http.get('https://swapi.co/api/' + this.people)
+    .subscribe((responsetwo) => {
+      this.responsetwo = responsetwo;
+     console.log(this.responsetwo)
+   })
+  }
+  searchShips() {
+    this.http.get('https://swapi.co/api/starships/' + this.starships)
+    .subscribe((responsethree) => {
+      this.responsethree = responsethree;
+      console.log(this.responsethree)
+    })
+  }
+
+  searchFilms() {
+    this.http.get('https://swapi.co/api/films/' + this.films)
+    .subscribe((responsefour) => {
+      this.responsefour = responsefour;
+      console.log(this.responsefour)
+    })
+  }
+
+
 }
 
  
