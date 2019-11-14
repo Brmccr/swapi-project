@@ -6,6 +6,22 @@
   margin-right: auto;
 }
 
+/* .mainimg {
+    width: 100%;
+    height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 25s;
+  position: static;
+  z-index: 1
+ } */
+
+ /* @keyframes fadeIn {
+    0% { visibility: hidden;}
+    100%{visibility: visible;}
+   } */
+
 .mainlab{
     color: #ffd700;
 }
